@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: $main_font;
+    color: $text_color;
+  }
+  
+  a {
+    color: $text_color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  @mixin btn($bgcolor, $color, $hovercolor, $hovertextcolor) {
+    padding: 15px 33px;
+    background-color: $bgcolor;
+    color: $color;
+    border: 1px solid $primary_color;
+    border-radius: 30px;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $hovercolor;
+      color: $hovertextcolor;
+    }
+  }
+  
+  .btn {
+    @include btn($primary_color, #fff, #fff, $primary_color);
+  }
+  
+  .btn-outline {
+    @include btn(#fff, $primary_color, $primary_color, #fff);
+  }
+

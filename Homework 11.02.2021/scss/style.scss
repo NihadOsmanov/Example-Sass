@@ -1,0 +1,338 @@
+@import "variables";
+@import "shared";
+@import "mixins";
+
+header {
+  position: relative;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    .left-head {
+      display: flex;
+      .logo {
+        a {
+          color: $text_color;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        margin-left: 90px;
+        ul {
+          list-style-type: none;
+          li {
+            display: inline-block;
+            margin: 0 25px;
+            a {
+              color: $second_text_color;
+              font-weight: 600;
+              font-size: 14px;
+              font-family: $secondary_font;
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-box {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+  }
+}
+
+#services {
+  background-image: url("../image/bg-image.png");
+  position: relative;
+  height: 650px;
+
+  .services-info {
+    margin-bottom: 80px;
+
+    h1 {
+      font-weight: 900;
+      font-size: 58px;
+      line-height: 65px;
+    }
+
+    p {
+      margin: 35px 0;
+    }
+
+    .services-btn-box {
+      a {
+        display: inline-block;
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .text-box {
+    padding: 80px 0;
+
+    .item {
+      padding: 35px 40px;
+      background-color: $bg_color_secondary;
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+      h3 {
+        margin: 10px 0;
+      }
+    }
+    .item-estates {
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+      background-color: #295c7a;
+      padding: 35px 40px;
+      h3 {
+        margin: 10px 0;
+        color: $bg_color_secondary;
+      }
+      p {
+        color: $bg_color_secondary;
+      }
+    }
+  }
+}
+#features {
+  background-color: $bg_color;
+  @include flex-list;
+  padding-bottom: 94px;
+  .content {
+    padding: 195px 288px 0px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      text-align: center;
+      padding-top: 10px;
+      font-family: $secondary_font;
+      color: $second_text_color;
+    }
+  }
+  .icon {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: $bg_color_secondary;
+  }
+
+  .card-item {
+    text-align: center;
+    background-color: $bg_color_secondary;
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+    p {
+      padding-bottom: 30px;
+      font-size: 14px;
+      color: $second_text_color;
+    }
+  }
+}
+#about {
+  .content {
+    @include flex-list;
+    padding: 100px 290px 0px;
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-family: $secondary_font;
+      color: $second_text_color;
+    }
+  }
+  .cover {
+    padding-top: 100px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../icons/button.svg);
+      width: 98px;
+      height: 98px;
+      bottom: 160px;
+      left: 280px;
+    }
+  }
+
+  .about-content {
+    padding-top: 100px;
+    h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    p {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: $secondary_font;
+      color: $second_text_color;
+    }
+  }
+  .about-item-first {
+    h5 {
+      font-weight: 700;
+    }
+    p {
+      font-size: 14px;
+      font-style: $secondary_font;
+      color: $second_text_color;
+    }
+  }
+}
+#client {
+  background-color: $bg_color;
+  .client-icons {
+    display: flex;
+    padding-top: 65px;
+    padding-bottom: 70px;
+
+    .brand-icon {
+      padding-right: 85px;
+    }
+  }
+  .client-card-item {
+    display: flex;
+    padding-top: 35px;
+    background-color: #295c7a;
+
+    .client-card-item-content {
+      display: flex;
+      padding-left: 40px;
+      padding-bottom: 30px;
+
+      
+
+      .input-group {
+        padding-left: 235px;
+        padding-right: 50px;
+
+        .btn{
+          background-color: $bg_bd_c;
+          border: 1px solid $bg_bd_c;
+          padding: 15px 23px;
+          border-radius: 0%;
+        }
+      }
+      h3{
+        color: $bg_color_secondary;
+      }
+      
+    }
+  }
+}
+#contact{
+background-color: #F3F3F3;
+height: 810px;
+  .contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 280px;
+
+    h2{
+      font-family: $main_font;
+      font-weight: 700;
+      font-size: 40px;
+    }
+    p{
+      text-align: center;
+    }
+  }
+  .contact-icon{
+    text-align: center;
+    background-color: $bg_color_secondary;
+    padding-top: 50px;
+  }
+  .contact-icon-secondary{
+    @extend .contact-icon;
+    background-color: $text_color;
+    color: $bg_color_secondary;
+
+   
+  }
+  .contact-item{
+    text-align: center;
+    background-color: $bg_color_secondary;
+    padding-top: 15px;
+    padding-bottom: 55px;
+
+    h5{
+      padding-bottom: 20px;
+    }
+
+    .btn{
+      background-color: $bg_color_secondary;
+      color: $bg_bd_c;
+      border-radius: 0%;
+      border: 1px solid $bg_bd_c;
+    }
+  }
+  .contact-item-secondary{
+    @extend .contact-item;
+    background-color: $text_color;
+    color: $bg_color_secondary;
+  }
+  .main-content{
+    background-color: white;
+  }
+}
+
+#footer{
+
+  .footer-content{
+    padding-top: 40px;
+
+    h3{
+    font-size: 24px;
+    font-family: $main_font;
+    font-weight: 700;
+    text-align: center;
+    }
+    p{
+    font-family: $secondary_font;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    font-family: $secondary_font;
+    }
+
+    .btn-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+      .btn{
+        border-radius: 5%;
+        text-decoration: none;
+        &:hover{
+          text-decoration: none;
+          background-color: $primary_color;
+          color: #F3F3F3;
+        }
+      }
+    }
+}
+
+  .footer-list{
+
+    li{
+      list-style: none;
+      font-family: $secondary_font;
+      font-size: 14px;
+    }
+  }
+}
